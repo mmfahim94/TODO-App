@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="ToDo">
+<head>
+	<meta charset="UTF-8">
+	<title> CPS630 - LAB4 </title>
+	<link rel="stylesheet" href="lab04.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body class = "body">
+	<h1> TODO APP </h1>
+	<hr class = "hr"><br>
+	<div ng-controller="todocntrl">
+		<div>
+			<form class="form-inline" ng-submit = "addTodo()">
+			  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="t" placeholder="Task" name = "title" ng-model = "newTitle" required />
+			  <input type="text" class="form-control" id="d" placeholder="Description" name = "description" ng-model = "newDescription" required />
+			  <button type="submit" id = "bt" class="btn btn-primary">Add</button>
+			</form> <br>
+
+			<input class="btn btn-default btn-file" type="file" id="file" name="file"/>
+			<button id = "upload" class="btn btn-primary glyphicon glyphicon-cloud-upload" ng-click="add()"></button>
+		</div>
+		<div class = "list" ng-include src=" 'task.htm' "> </div>
+	</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>		
+<script src="lab04.js"></script>
+
+</body>
+</html>
+	

@@ -1,0 +1,17 @@
+<div class = "left">
+	<h1> Your Tasks </h1>
+	<div class = "tasks" ng-repeat="todo in todos track by $index">
+		<span id = "title">{{todo.title}}</span> -
+		<span id = "description">{{todo.description}}</span><br>
+		<button class="btn btn-success glyphicon glyphicon-ok" ng-click="completeTask(todo)" ></button> <button class="btn btn-danger glyphicon glyphicon-trash" ng-click="removeTask(todo)"></button><br>
+	</div>
+</div>
+
+<div class = "right">
+	<h1> Completed Tasks </h1>
+	<div class = "tasks" ng-repeat="todo in completed track by $index">
+		<span>{{todo.title}}</span> -
+		<span>{{todo.description}}</span><br>
+		<button class="btn btn-danger glyphicon glyphicon-trash" ng-click="removeCompletedTask(todo)"></button><br>
+	</div>
+</div>
